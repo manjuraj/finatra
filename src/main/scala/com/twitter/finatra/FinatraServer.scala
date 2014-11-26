@@ -72,6 +72,7 @@ class FinatraServer extends FinatraTwitterServer {
 
   private[this] lazy val codec = {
     http.Http()
+      .maxInitialLineLength(config.maxInitialLineLength().bytes)
       .maxRequestSize(config.maxRequestSize().megabyte)
       .enableTracing(true)
       .server(ServerCodecConfig("httpserver", new SocketAddress{}))
