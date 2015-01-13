@@ -1,4 +1,4 @@
-# Finatra [![Build Status](https://secure.travis-ci.org/twitter/finatra.png?branch=master)](http://travis-ci.org/twitter/finatra) [![Coverage Status](https://coveralls.io/repos/twitter/finatra/badge.png?branch=master)](https://coveralls.io/r/twitter/finatra?branch=master)
+# Finatra [![Build Status](https://secure.travis-ci.org/twitter/finatra.png?branch=master)](http://travis-ci.org/twitter/finatra)
 
 [Finatra](http://finatra.info) is a sinatra-inspired web framework for scala, running on top of [Finagle](http://twitter.github.com/finagle/)
 
@@ -24,7 +24,7 @@ object App extends FinatraServer {
 ### SBT (dual published for 2.9.x or 2.10.x)
 
 ```scala
-"com.twitter" %% "finatra" % "1.5.3"
+"com.twitter" %% "finatra" % "1.6.0"
 ```
 
 ### Maven
@@ -34,7 +34,7 @@ object App extends FinatraServer {
   <groupId>com.twitter</groupId>
   <artifactId>finatra_2.10</artifactId>
   <!-- for 2.9 <artifactId>finatra_2.9.2</artifactId> -->
-  <version>1.5.3</version>
+  <version>1.6.0</version>
 </dependency>
 ```
 

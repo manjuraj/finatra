@@ -13,25 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.twitter.finatra.test
+package com.twitter.finatra
 
-import com.twitter.finatra.View
+import com.twitter.finatra.test.ShouldSpec
 
-case class Post(val title:String)
+class FileResolverSpec extends ShouldSpec {
 
-class PostsListView(val posts:List[Post]) extends View {
-  val template  = "posts.mustache"
-  contentType   = Some("text/plain")
-}
-
-class PostsView(val posts:List[Post]) extends View {
-  val template      = "posts_layout.mustache"
-  val postsListView = new PostsListView(posts)
-
-  def body          = postsListView.render
-}
-
-class MasterView extends View {
-  val template = "master.mustache"
-  val body = "please <escape> me"
+  "FileResolverSpec" should "detect a directory" in {
+    FileResolver.hasLocalDirectory("public/components") should be(true)
+  }
 }
